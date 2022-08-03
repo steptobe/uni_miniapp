@@ -4,6 +4,7 @@
 		globalData: {
 			exeQueue: true,
 			promiseQueue: [],
+			isLogging:false,// 正在登陆
 			needBeginLogin: true
 		},
 		onLaunch: function() {
@@ -32,11 +33,10 @@
 				  }
 				});
 			}
-			this.$store.dispatch('authorizeStatus');
+			
 		},
 		onShow: function() {
 			console.log('App Show')
-			this.$store.dispatch('authorizeStatus');
 		},
 		onHide: function() {
 			console.log('App Hide')
